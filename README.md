@@ -2,7 +2,7 @@ So hier die 2te Hausaufgabe grundlage hierfür ist Zend2
 im ordner 2 install ist meine php.ini
 und eine Datei mit der Datenbankinitsialisierung.
 Genutz habe ich xampp bzw.: Apache mit MySQL
-Das gesammte Git repositori in einen unterordner in htdocs schieben.
+Das gesammte Git repo in einen unterordner in htdocs schieben.
 Bei mir (htdocs/zf)
 
 
