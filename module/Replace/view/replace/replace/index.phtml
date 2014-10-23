@@ -1,0 +1,36 @@
+ <?php
+
+
+ $title = 'My Replacements';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <p>
+     <a href="<?php echo $this->url('replace', array('action'=>'add'));?>">Add new Replacement</a>
+ </p>
+
+ <p>
+     <a href="<?php echo $this->url('replace', array('action'=>'text'));?>">Type Text</a>
+ </p>
+ 
+ 
+ 
+ <table class="table">
+ <tr>
+     <th>WordOne</th>
+     <th>WordTwo</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($replaces as $replace) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($replace->wordone);?></td>
+     <td><?php echo $this->escapeHtml($replace->wordtwo);?></td>
+     <td>
+         <a href="<?php echo $this->url('replace',
+             array('action'=>'edit', 'id' => $replace->id));?>">Edit</a>
+         <a href="<?php echo $this->url('replace',
+             array('action'=>'delete', 'id' => $replace->id));?>">Delete</a>
+     </td>
+ </tr>
+ <?php endforeach; ?>
+ </table>
